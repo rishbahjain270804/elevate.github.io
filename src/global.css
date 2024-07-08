@@ -1,0 +1,219 @@
+/* global.css */
+body {
+  background-color: #e7e6e1; /* soft, creamy beige */
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* default font family */
+}
+.description-text {
+  color: #000000; /* Bold Black */
+  font-weight: bold;
+}
+
+.special-text {
+  color: #8f7761;
+  font-family: "Art Nuvo Letterpress", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+@font-face {
+  font-family: "Bodoni";
+  src: url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap")
+    format("opentype");
+}
+
+@font-face {
+  font-family: "Art Nuvo Letterpress";
+  src: url("../public/Art-nuvo\ 400.otf") format("opentype");
+}
+
+.description {
+  font-family: Bodoni;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #ac9686;
+}
+/*HeroSection*/
+.hero-section {
+  height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.hero-text-container {
+  flex-basis: 40%;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-heading {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.hero-paragraph {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-button {
+  background-color: #8f7761;
+  color: #e7e6e1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.hero-image-container {
+  flex-basis: 50%;
+  height: 100%;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hero-text-container {
+    flex-basis: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero-image-container {
+    flex-basis: auto;
+    width: 100%;
+    height: 40vh;
+  }
+}
+
+/*cointainer*/
+
+.container {
+  text-align: center;
+  color: #8f7761;
+  font-family: "Art Nuvo Letterpress", serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .container {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    font-size: 14px;
+  }
+}
+/*ProductCard*/
+.product-card {
+  max-width: 80%;
+  height: 70vh;
+  margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dimage-container {
+  width: 40%;
+  height: 100%;
+}
+
+.d
+.dimage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.content-container {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.special-text {
+  font-size: 36px;
+}
+
+.description {
+  font-size: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-now-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 768px) {
+ .product-card {
+    max-width: 90%; /* increase card width size */
+    height: 30vh; /* reduce card height */
+  }
+ .dimage-container {
+    width: 30%; /* reduce image width */
+    height: 100%; /* keep image height same */
+  }
+ .dimage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+ .content-container {
+    width: 70%; /* reduce content width */
+    padding: 15px; /* reduce padding */
+  }
+ .special-text {
+    font-size: 24px; /* reduce font size */
+  }
+ .description {
+    font-size: 14px; /* reduce font size */
+    -webkit-line-clamp: 2; /* reduce number of lines */
+  }
+}
