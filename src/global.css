@@ -233,6 +233,6 @@ body {
 @media only screen and (max-width: 400px) {
   .product-card {
     max-width: 90%; /* increase card width size */
-    height: 20vh; /* reduce card height */
+    height: 40vh; /* reduce card height */
   }
 }
