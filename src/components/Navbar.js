@@ -1,68 +1,51 @@
 import React from 'react';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { useMediaQuery } from 'react-responsive';
 
 const Navbar = () => {
+  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
+  const isTablet = useMediaQuery({ query: '(min-width: 480px) and (max-width: 767px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 479px)' });
+
+  const navStyle = { 
+    backgroundImage: `url(${require('./navbar.png')})`,
+    backgroundSize: 'fit',
+    backgroundPosition: 'center',
+    backgroundColor: '#e7e6e1',
+    padding:'0.2rem',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    borderBottom: '10px solid #333',
+    borderRight: '7px solid #333',
+    borderRadius: '25px',
+  };
+
+  const imgStyle = {
+    borderRadius:'10px',
+    width: isDesktop ? '180px' : isTablet ? '100px' : '80px',
+    height: isDesktop ? '85px' : isTablet ? '50px' : '40px',
+  };
+
   return (
-    <nav style={{
-      backgroundColor: '#e7e6e1',
-      padding: '0.02rem',
-      display: 'flex',
-      justifyContent: 'space-between',
-      alignItems: 'center',
-      borderBottom: '1px solid #333',
-      // Add media queries for responsive design
-      '@media (max-width: 768px)': {
-        padding: '0.3rem',
-      },
-      '@media (max-width: 480px)': {
-        padding: '0.2rem',
-        flexDirection: 'column',
-        alignItems: 'flex-start',
-      }
-    }}>
+    <nav style={navStyle}>
+      <img src={require('../elevate_logo.png')} alt="Elevate Logo" style={imgStyle} />
 
-      <a href="#" style={{
-        fontSize: '18px',
-        fontWeight: 'bold',
-        color: '#8F7761',
-        textDecoration: 'none',
-        marginRight: '20px',
-        // Add media queries for responsive design
-        '@media (max-width: 480px)': {
-          marginRight: '0',
-        }
-      }}>
-        <FaUser size={20} />
-      </a>
-
-      <img src="/elevate_logo-removebg.png" alt="Elevate Logo" style={{
-        width: '180px',
-        height: '85px',
-        margin: '0 auto', // Add margin to center the logo
-        // Add media queries for responsive design
-        '@media (max-width: 768px)': {
-          width: '100px',
-          height: '50px',
-        },
-        '@media (max-width: 480px)': {
-          width: '80px',
-          height: '40px',
-        }
-      }} />
-
-      <a href="#" style={{
-        fontSize: '18px',
-        fontWeight: 'bold',
-        color: '#8F7761',
-        textDecoration: 'none',
-        marginLeft: '20px',
-        // Add media queries for responsive design
-        '@media (max-width: 480px)': {
-          marginLeft: '0',
-        }
-      }}>
-        <FaShoppingCart size={20} />
-      </a>
+      <div>
+        <ul style={{
+          listStyle: 'none',
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          margin: 0,
+          padding: 0,
+        }}>
+          <li style={{ marginRight: '20px' }}>Home</li>
+          <li style={{ marginRight: '20px' }}>Shop</li>
+          <li>About US</li>
+        </ul>
+      </div>
 
     </nav>
   );

@@ -144,8 +144,7 @@ body {
   height: 100%;
 }
 
-.d
-.dimage {
+.d .dimage {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -181,39 +180,51 @@ body {
 }
 
 .buy-now-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  background-image: linear-gradient(to bottom, #4CAF50, #3e8e41);
+  background-image: linear-gradient(to bottom, #4caf50, #3e8e41);
 }
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
- .product-card {
+  .product-card {
     max-width: 90%; /* increase card width size */
-    height: 30vh; /* reduce card height */
+    height: 50vh; /* reduce card height */
   }
- .dimage-container {
+  .dimage-container {
     width: 30%; /* reduce image width */
     height: 100%; /* keep image height same */
   }
- .dimage {
+  .dimage {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
- .content-container {
+  .content-container {
     width: 70%; /* reduce content width */
     padding: 15px; /* reduce padding */
   }
- .special-text {
+  .special-text {
     font-size: 24px; /* reduce font size */
   }
- .description {
+  .description {
     font-size: 14px; /* reduce font size */
     -webkit-line-clamp: 2; /* reduce number of lines */
+  }
+}
+@media only screen and (max-width: 555px) {
+  .product-card {
+    max-width: 90%; /* increase card width size */
+    height: 35vh; /* reduce card height */
+  }
+}
+@media only screen and (max-width: 400px) {
+  .product-card {
+    max-width: 90%; /* increase card width size */
+    height: 20vh; /* reduce card height */
   }
 }
