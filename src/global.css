@@ -224,9 +224,4 @@ body {
     -webkit-line-clamp: 2; /* reduce number of lines */
   }
 }
-@media only screen and (max-width: 555px) {
-  .product-card {
-    max-width: 90%; /* increase card width size */
-    height: 50vh; /* reduce card height */
-  }
 }
