@@ -200,7 +200,7 @@ body {
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
   .product-card {
-    max-width: 90%; /* increase card width size */
+    max-width: 100%; /* increase card width size */
     height: 50vh; /* reduce card height */
   }
   .dimage-container {
@@ -226,7 +226,7 @@ body {
 }
 @media only screen and (max-width: 555px) {
   .product-card {
-    max-width: 90%; /* increase card width size */
-    height: 50vh; /* reduce card height */
+    max-width: 100%; /* increase card width size */
+    height: 30vh; /* reduce card height */
   }
 }
