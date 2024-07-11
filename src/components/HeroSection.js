@@ -1,10 +1,14 @@
 import React from 'react';
 import '../global.css';
-import rex from '../components/t-rex.png';
+import rex from '../components/t-rex-inverse.png';
 
 const HeroSection = () => {
   return (
     <section className='hero-section'>
+      <div
+        className='hero-image-container'
+        style={{ backgroundImage: `url(${rex})`}}
+      />
       <div className='hero-text-container'>
         <h1
           className='hero-heading special-text'
@@ -21,10 +25,6 @@ const HeroSection = () => {
           Shop Now
         </button>
       </div>
-      <div
-        className='hero-image-container'
-        style={{ backgroundImage: `url(${rex})` }}
-      />
     </section>
   );
 };
