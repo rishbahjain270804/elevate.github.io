@@ -5,7 +5,6 @@ import '../global.css'
 const Navbar = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   const isTablet = useMediaQuery({ query: '(min-width: 480px) and (max-width: 767px)' });
-  const isMobile = useMediaQuery({ query: '(max-width: 479px)' });
 
   const navStyle = {
     backgroundImage: `url(${require('./navbar.png')})`,
