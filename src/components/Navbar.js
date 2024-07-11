@@ -17,8 +17,8 @@ const Navbar = () => {
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center',
-    borderBottom: '10px solid #333',
-    borderRight: '7px solid #333',
+    borderBottom: isDesktop ? '10px solid #333': isTablet ? '5px solid #333' :'3px solid #333',
+    borderRight: isDesktop ? '10px solid #333': isTablet ? '5px solid #333' :'3px solid #333',
     borderRadius: '25px',
   };
 
