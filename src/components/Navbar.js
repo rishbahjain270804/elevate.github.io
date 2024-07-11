@@ -1,17 +1,18 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
+import '../global.css'
 
 const Navbar = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
   const isTablet = useMediaQuery({ query: '(min-width: 480px) and (max-width: 767px)' });
   const isMobile = useMediaQuery({ query: '(max-width: 479px)' });
 
-  const navStyle = { 
+  const navStyle = {
     backgroundImage: `url(${require('./navbar.png')})`,
     backgroundSize: 'fit',
     backgroundPosition: 'center',
     backgroundColor: '#e7e6e1',
-    padding:'0.2rem',
+    padding: '0.2rem',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -22,7 +23,7 @@ const Navbar = () => {
   };
 
   const imgStyle = {
-    borderRadius:'10px',
+    borderRadius: '10px',
     width: isDesktop ? '180px' : isTablet ? '100px' : '80px',
     height: isDesktop ? '85px' : isTablet ? '50px' : '40px',
   };
@@ -41,9 +42,9 @@ const Navbar = () => {
           margin: 0,
           padding: 0,
         }}>
-          <li style={{ marginRight: '20px' }}>Home</li>
-          <li style={{ marginRight: '20px' }}>Shop</li>
-          <li>About US</li>
+          <li className='special-text-nav' style={{ marginRight: '20px' }}>Home</li>
+          <li className='special-text-nav' style={{ marginRight: '20px' }}>Shop</li>
+          <li className='special-text-nav'>About US</li>
         </ul>
       </div>
 

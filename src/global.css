@@ -17,6 +17,14 @@ body {
   text-transform: uppercase;
   position: relative;
 }
+.special-text-nav {
+  color: #e7e6e1;
+  font-family: "Art Nuvo Letterpress";
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+}
 @font-face {
   font-family: "Bodoni";
   src: url("https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap")
