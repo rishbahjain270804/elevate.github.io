@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className='hero-section'>
       <div
         className='hero-image-container'
-        style={{ backgroundImage: `url(${rex})`}}
+        style={{ backgroundImage: `url(${rex})` }}
       />
       <div className='hero-text-container'>
         <h1
